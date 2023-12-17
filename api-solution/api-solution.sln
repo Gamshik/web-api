@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{7028806F-BAF6-43AD-9308-5A423091D41A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entites", "Entites\Entites.csproj", "{ABAEC978-D241-444E-AE0F-44995F026328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerDAL", "LayerDAL\LayerDAL.csproj", "{47CB184D-B287-4B77-9F80-785E549DFF74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7028806F-BAF6-43AD-9308-5A423091D41A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7028806F-BAF6-43AD-9308-5A423091D41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7028806F-BAF6-43AD-9308-5A423091D41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7028806F-BAF6-43AD-9308-5A423091D41A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABAEC978-D241-444E-AE0F-44995F026328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAEC978-D241-444E-AE0F-44995F026328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAEC978-D241-444E-AE0F-44995F026328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAEC978-D241-444E-AE0F-44995F026328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47CB184D-B287-4B77-9F80-785E549DFF74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CB184D-B287-4B77-9F80-785E549DFF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CB184D-B287-4B77-9F80-785E549DFF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CB184D-B287-4B77-9F80-785E549DFF74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9D460AA-1144-4536-9DEC-D95BA5456DA2}
+	EndGlobalSection
+EndGlobal
