@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{7028806F-BAF6-43AD-9308-5A423091D41A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{7028806F-BAF6-43AD-9308-5A423091D41A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entites", "Entites\Entites.csproj", "{ABAEC978-D241-444E-AE0F-44995F026328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entites", "Entites\Entites.csproj", "{ABAEC978-D241-444E-AE0F-44995F026328}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerDAL", "LayerDAL\LayerDAL.csproj", "{47CB184D-B287-4B77-9F80-785E549DFF74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LayerDA", "LayerDAL\LayerDA.csproj", "{47CB184D-B287-4B77-9F80-785E549DFF74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{361F1FBD-5B4E-44CF-87C0-77AF045CB8AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayerBL", "LayerBL\LayerBL.csproj", "{5F3EC92C-E380-45DC-BF4B-52E3FD0F337F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{47CB184D-B287-4B77-9F80-785E549DFF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47CB184D-B287-4B77-9F80-785E549DFF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47CB184D-B287-4B77-9F80-785E549DFF74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{361F1FBD-5B4E-44CF-87C0-77AF045CB8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361F1FBD-5B4E-44CF-87C0-77AF045CB8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361F1FBD-5B4E-44CF-87C0-77AF045CB8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361F1FBD-5B4E-44CF-87C0-77AF045CB8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3EC92C-E380-45DC-BF4B-52E3FD0F337F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3EC92C-E380-45DC-BF4B-52E3FD0F337F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3EC92C-E380-45DC-BF4B-52E3FD0F337F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3EC92C-E380-45DC-BF4B-52E3FD0F337F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

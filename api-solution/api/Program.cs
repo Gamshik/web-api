@@ -1,4 +1,10 @@
+using api.Extensions;
+using Entites.Extensions;
+using Interfaces.Repositories;
+using Interfaces.Services;
+using LayerBL.Services;
 using LayerDAL.Context;
+using LayerDAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,8 +18,17 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<CinemaContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.ConfigureMapper();
+
+builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IMovieService, MovieService>();
+
 
 var app = builder.Build();
+
+app.MigrateDatabase<CinemaContext>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

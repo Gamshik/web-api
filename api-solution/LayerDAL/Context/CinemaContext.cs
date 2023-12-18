@@ -1,11 +1,6 @@
 ﻿using Entites;
 using LayerDAL.Configurations;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LayerDAL.Context
 {
@@ -13,9 +8,8 @@ namespace LayerDAL.Context
     {
         public DbSet<Author> Authors { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        public CinemaContext(DbContextOptions options) : base(options) 
-        {
-            Database.EnsureCreated();
+        public CinemaContext(DbContextOptions options) : base(options)
+        {   
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
