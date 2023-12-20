@@ -34,13 +34,13 @@ namespace LayerDAL.Repositories
             _context.Movies.Remove(movieForDelete);
             await _context.SaveChangesAsync(cancellationToken);
         }
-        public async Task<IEnumerable<Movie>> GetAllAsync(CancellationToken cancellationToken = default)
+        public async Task<IQueryable<Movie>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            return await _context.Movies.ToListAsync();
+            return await Task.FromResult(_context.Movies.AsNoTracking().Include(m => m.Author));
         }
         public async Task<Movie?> GetMovieByIdAsync(int id, CancellationToken cancellationToken = default)
         {
-            return await _context.Movies.SingleOrDefaultAsync(m => m.Id == id, cancellationToken);
+            return await _context.Movies.AsNoTracking().Include(m => m.Author).SingleOrDefaultAsync(m => m.Id == id, cancellationToken);
         }
         public async Task UpdateMovieAsync(Movie movie, CancellationToken cancellationToken = default)
         {

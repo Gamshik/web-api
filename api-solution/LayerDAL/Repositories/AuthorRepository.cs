@@ -29,13 +29,13 @@ namespace LayerDAL.Repositories
             _context.Authors.Remove(authorForDelete);
             await _context.SaveChangesAsync(cancellationToken);
         }
-        public async Task<IEnumerable<Author>> GetAllAuthorAsync(CancellationToken cancellationToken = default)
+        public async Task<IQueryable<Author>> GetAllAuthorAsync(CancellationToken cancellationToken = default)
         {
-            return await _context.Authors.ToListAsync(cancellationToken);
+            return await Task.FromResult(_context.Authors.AsNoTracking());
         }
         public async Task<Author?> GetAuthorByIdAsync(int id, CancellationToken cancellationToken = default)
         {
-            return await _context.Authors.SingleOrDefaultAsync(a => a.Id == id, cancellationToken);
+            return await _context.Authors.AsNoTracking().SingleOrDefaultAsync(a => a.Id == id, cancellationToken);
         }
         public async Task UpdateAuthorAsync(Author author, CancellationToken cancellationToken = default)
         {
