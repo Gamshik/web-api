@@ -14,8 +14,8 @@ namespace LayerBL.Profiles
         public MovieProfile()
         {
             CreateMap<Movie, MovieDto>().ReverseMap();
-            CreateMap<Movie, MovieForCreateDto>().ReverseMap();
-            CreateMap<Movie, MovieForUpdateDto>().ReverseMap();
+            CreateMap<MovieForCreateDto, Movie>();
+            CreateMap<MovieForUpdateDto, Movie>();
         }
     }
 }

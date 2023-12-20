@@ -14,8 +14,8 @@ namespace LayerBL.Profiles
         public AuthorProfile()
         {
             CreateMap<Author, AuthorDto>().ReverseMap();
-            CreateMap<Author, AuthorForCreateDto>().ReverseMap();
-            CreateMap<Author, AuthorForUpdateDto>().ReverseMap();
+            CreateMap<AuthorForCreateDto, Author>();
+            CreateMap<AuthorForUpdateDto, Author>();
         }
     }
 }
