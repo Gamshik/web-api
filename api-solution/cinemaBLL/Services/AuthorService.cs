@@ -4,7 +4,7 @@ using Entites.DataTransferObject;
 using Interfaces.Repositories;
 using Interfaces.Services;
 
-namespace LayerBL.Services
+namespace cinemaBLL.Services
 {
     public class AuthorService : IAuthorService
     {

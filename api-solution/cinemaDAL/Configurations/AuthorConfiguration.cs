@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace LayerDAL.Configurations
+namespace cinemaDAL.Configurations
 {
     public class AuthorConfiguration : IEntityTypeConfiguration<Author>
     {

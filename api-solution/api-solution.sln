@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cinema-api", "api\cinema-ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entites", "Entites\Entites.csproj", "{ABAEC978-D241-444E-AE0F-44995F026328}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cinema-DAL", "LayerDAL\cinema-DAL.csproj", "{47CB184D-B287-4B77-9F80-785E549DFF74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cinemaDAL", "cinemaDAL\cinemaDAL.csproj", "{47CB184D-B287-4B77-9F80-785E549DFF74}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{361F1FBD-5B4E-44CF-87C0-77AF045CB8AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cinema-BLL", "LayerBL\cinema-BLL.csproj", "{5F3EC92C-E380-45DC-BF4B-52E3FD0F337F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cinemaBLL", "cinemaBLL\cinemaBLL.csproj", "{5F3EC92C-E380-45DC-BF4B-52E3FD0F337F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

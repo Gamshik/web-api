@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\cinemaBLL\cinemaBLL.csproj" />
+    <ProjectReference Include="..\cinemaDAL\cinemaDAL.csproj" />
     <ProjectReference Include="..\Entites\Entites.csproj" />
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
-    <ProjectReference Include="..\LayerBL\cinema-BLL.csproj" />
-    <ProjectReference Include="..\LayerDAL\cinema-DAL.csproj" />
   </ItemGroup>
 
 </Project>

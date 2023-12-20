@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LayerBL.Profiles
+namespace cinemaBLL.Profiles
 {
     public class MovieProfile : Profile
     {

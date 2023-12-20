@@ -2,9 +2,9 @@ using api.Extensions;
 using Entites.Extensions;
 using Interfaces.Repositories;
 using Interfaces.Services;
-using LayerBL.Services;
-using LayerDAL.Context;
-using LayerDAL.Repositories;
+using cinemaBLL.Services;
+using cinemaDAL.Context;
+using cinemaDAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

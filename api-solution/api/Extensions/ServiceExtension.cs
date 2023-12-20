@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using LayerBL.Profiles;
+using cinemaBLL.Profiles;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Entites.Extensions

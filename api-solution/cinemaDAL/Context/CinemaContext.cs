@@ -1,8 +1,8 @@
 ﻿using Entites;
-using LayerDAL.Configurations;
+using cinemaDAL.Configurations;
 using Microsoft.EntityFrameworkCore;
 
-namespace LayerDAL.Context
+namespace cinemaDAL.Context
 {
     public class CinemaContext : DbContext
     {

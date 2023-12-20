@@ -1,7 +1,7 @@
 ﻿using Entites;
 using Entites.Exeptions;
 using Interfaces.Repositories;
-using LayerDAL.Context;
+using cinemaDAL.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LayerDAL.Repositories
+namespace cinemaDAL.Repositories
 {
     public class MovieRepository : IMovieRepository
     {

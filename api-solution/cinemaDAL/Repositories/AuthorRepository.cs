@@ -1,10 +1,10 @@
 ﻿using Entites;
 using Entites.Exeptions;
 using Interfaces.Repositories;
-using LayerDAL.Context;
+using cinemaDAL.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace LayerDAL.Repositories
+namespace cinemaDAL.Repositories
 {
     public class AuthorRepository : IAuthorRepository
     {
