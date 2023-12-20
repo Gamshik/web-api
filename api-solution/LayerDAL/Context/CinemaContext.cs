@@ -9,7 +9,7 @@ namespace LayerDAL.Context
         public DbSet<Author> Authors { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public CinemaContext(DbContextOptions options) : base(options)
-        {   
+        {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
