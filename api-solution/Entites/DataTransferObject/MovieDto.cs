@@ -8,5 +8,6 @@
         public DateTime ReleaseDate { get; set; }
 
         public int? AuthorId { get; set; }
+        public AuthorDto? Author { get; set; }
     }
 }
