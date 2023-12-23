@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
 using cinemaBLL.Profiles;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace Entites.Extensions
+namespace cinemaApi.Extensions
 {
     public static class ServiceExtension
     {

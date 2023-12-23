@@ -1,9 +1,8 @@
 ﻿using Entites.DataTransferObject;
 using Interfaces.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace cinemaApi.Controllers
 {
     [ApiController]
     [Route("api/Author")]

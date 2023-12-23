@@ -1,13 +1,8 @@
-﻿using Entites;
+﻿using cinemaDAL.Context;
+using Entites;
 using Entites.Exeptions;
 using Interfaces.Repositories;
-using cinemaDAL.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace cinemaDAL.Repositories
 {

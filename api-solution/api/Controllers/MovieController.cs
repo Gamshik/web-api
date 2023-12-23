@@ -2,7 +2,7 @@
 using Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace cinemaApi.Controllers
 {
     [ApiController]
     [Route("api/Movie")]

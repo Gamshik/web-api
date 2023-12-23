@@ -1,10 +1,13 @@
-using api.Extensions;
-using Entites.Extensions;
-using Interfaces.Repositories;
-using Interfaces.Services;
+using cinemaApi.Extensions;
+using cinemaApi.Middleware;
 using cinemaBLL.Services;
+using cinemaBLL.Validations;
 using cinemaDAL.Context;
 using cinemaDAL.Repositories;
+using Entites;
+using FluentValidation;
+using Interfaces.Repositories;
+using Interfaces.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,9 +25,12 @@ builder.Services.ConfigureMapper();
 
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 
+builder.Services.AddScoped<IValidator<Author>, AuthorValidator>();
+builder.Services.AddScoped<IValidator<Movie>, MovieValidator>();
 
 var app = builder.Build();
 
@@ -36,6 +42,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 

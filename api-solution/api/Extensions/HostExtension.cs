@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace api.Extensions
+namespace cinemaApi.Extensions
 {
     public static class HostExtension
     {

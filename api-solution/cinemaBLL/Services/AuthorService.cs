@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Entites;
 using Entites.DataTransferObject;
+using FluentValidation;
 using Interfaces.Repositories;
 using Interfaces.Services;
 
@@ -10,14 +11,19 @@ namespace cinemaBLL.Services
     {
         private readonly IAuthorRepository _authorRepository;
         private readonly IMapper _mapper;
-        public AuthorService(IAuthorRepository authorRepository, IMapper mapper)
+        private readonly IValidator<Author> _vaidator;
+        public AuthorService(IAuthorRepository authorRepository, IMapper mapper, IValidator<Author> validator)
         {
             _authorRepository = authorRepository;
             _mapper = mapper;
+            _vaidator = validator;
         }
         public async Task CreateAuthorAsync(AuthorForCreateDto author, CancellationToken cancellationToken = default)
         {
             var authorForCreate = _mapper.Map<Author>(author);
+
+            _vaidator.ValidateAndThrow(authorForCreate);
+
             await _authorRepository.CreateAuthorAsync(authorForCreate, cancellationToken);
         }
         public async Task DeleteAuthorAsync(int id, CancellationToken cancellationToken = default)
@@ -35,6 +41,9 @@ namespace cinemaBLL.Services
         public async Task UpdateAuthorAsync(AuthorForUpdateDto author, CancellationToken cancellationToken = default)
         {
             var authorForUpdate = _mapper.Map<Author>(author);
+
+            _vaidator.ValidateAndThrow(authorForUpdate);
+
             await _authorRepository.UpdateAuthorAsync(authorForUpdate, cancellationToken);
         }
     }

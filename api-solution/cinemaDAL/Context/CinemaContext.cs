@@ -1,5 +1,5 @@
-﻿using Entites;
-using cinemaDAL.Configurations;
+﻿using cinemaDAL.Configurations;
+using Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace cinemaDAL.Context

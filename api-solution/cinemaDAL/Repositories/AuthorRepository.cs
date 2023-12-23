@@ -1,7 +1,7 @@
-﻿using Entites;
+﻿using cinemaDAL.Context;
+using Entites;
 using Entites.Exeptions;
 using Interfaces.Repositories;
-using cinemaDAL.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace cinemaDAL.Repositories

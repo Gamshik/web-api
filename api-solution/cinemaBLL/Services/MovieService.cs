@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Entites;
 using Entites.DataTransferObject;
+using FluentValidation;
 using Interfaces.Repositories;
 using Interfaces.Services;
 
@@ -10,14 +11,19 @@ namespace cinemaBLL.Services
     {
         private readonly IMovieRepository _movieRepository;
         private readonly IMapper _mapper;
-        public MovieService(IMovieRepository movieRepository, IMapper mapper)
+        private readonly IValidator<Movie> _validator;
+        public MovieService(IMovieRepository movieRepository, IMapper mapper, IValidator<Movie> validator)
         {
             _movieRepository = movieRepository;
             _mapper = mapper;
+            _validator = validator;
         }
         public async Task CreateMovieAsync(MovieForCreateDto movie, CancellationToken cancellationToken = default)
         {
             var movieForCreate = _mapper.Map<Movie>(movie);
+
+            _validator.ValidateAndThrow(movieForCreate);
+
             await _movieRepository.CreateMovieAsync(movieForCreate, cancellationToken);
         }
         public async Task DeleteMovieAsync(int id, CancellationToken cancellationToken = default)
@@ -35,6 +41,9 @@ namespace cinemaBLL.Services
         public async Task UpdateMovieAsync(MovieForUpdateDto movie, CancellationToken cancellationToken = default)
         {
             var movieForUpdate = _mapper.Map<Movie>(movie);
+
+            _validator.ValidateAndThrow(movieForUpdate);
+
             await _movieRepository.UpdateMovieAsync(movieForUpdate, cancellationToken);
         }
     }
