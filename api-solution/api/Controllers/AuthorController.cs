@@ -1,9 +1,11 @@
-﻿using Entites.DataTransferObject;
+﻿using Entites.DataTransferObject.AuthorDtos;
 using Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace cinemaApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/Author")]
     public class AuthorController : Controller

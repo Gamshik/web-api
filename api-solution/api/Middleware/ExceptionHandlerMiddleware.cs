@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using System.Runtime.Serialization.Json;
 using System.Text.Json;
 
 namespace cinemaApi.Middleware
@@ -7,7 +6,6 @@ namespace cinemaApi.Middleware
     public class ExceptionHandlerMiddleware
     {
         private readonly RequestDelegate _next;
-
         public ExceptionHandlerMiddleware(RequestDelegate next)
         {
             _next = next;
@@ -20,7 +18,7 @@ namespace cinemaApi.Middleware
             }
             catch (Exception ex)
             {
-                await HandleExceptionMessageAsync(httpContext, ex); 
+                await HandleExceptionMessageAsync(httpContext, ex);
             }
         }
         private static async Task HandleExceptionMessageAsync(HttpContext httpContext, Exception exception)

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Entites;
-using Entites.DataTransferObject;
+using Entites.DataTransferObject.AuthorDtos;
+using Entites.Models;
 
 namespace cinemaBLL.Profiles
 {

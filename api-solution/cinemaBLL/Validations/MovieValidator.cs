@@ -1,4 +1,4 @@
-﻿using Entites;
+﻿using Entites.Models;
 using FluentValidation;
 
 namespace cinemaBLL.Validations

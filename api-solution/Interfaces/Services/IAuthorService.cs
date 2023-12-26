@@ -1,4 +1,4 @@
-﻿using Entites.DataTransferObject;
+﻿using Entites.DataTransferObject.AuthorDtos;
 
 namespace Interfaces.Services
 {

@@ -1,4 +1,6 @@
-﻿namespace Entites.DataTransferObject
+﻿using Entites.DataTransferObject.AuthorDtos;
+
+namespace Entites.DataTransferObject.MovieDtos
 {
     public class MovieDto
     {

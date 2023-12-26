@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Entites;
-using Entites.DataTransferObject;
+using Entites.DataTransferObject.MovieDtos;
+using Entites.Models;
 using FluentValidation;
 using Interfaces.Repositories;
 using Interfaces.Services;

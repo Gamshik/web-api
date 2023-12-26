@@ -1,5 +1,5 @@
 ﻿using cinemaDAL.Configurations;
-using Entites;
+using Entites.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace cinemaDAL.Context
@@ -8,7 +8,7 @@ namespace cinemaDAL.Context
     {
         public DbSet<Author> Authors { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        public CinemaContext(DbContextOptions options) : base(options)
+        public CinemaContext(DbContextOptions<CinemaContext> options) : base(options)
         {
         }
 

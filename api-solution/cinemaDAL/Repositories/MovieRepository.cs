@@ -1,6 +1,6 @@
 ﻿using cinemaDAL.Context;
-using Entites;
 using Entites.Exeptions;
+using Entites.Models;
 using Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 

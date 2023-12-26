@@ -1,4 +1,4 @@
-﻿using Entites.DataTransferObject;
+﻿using Entites.DataTransferObject.MovieDtos;
 
 namespace Interfaces.Services
 {

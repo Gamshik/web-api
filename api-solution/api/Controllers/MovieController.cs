@@ -1,4 +1,4 @@
-﻿using Entites.DataTransferObject;
+﻿using Entites.DataTransferObject.MovieDtos;
 using Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 

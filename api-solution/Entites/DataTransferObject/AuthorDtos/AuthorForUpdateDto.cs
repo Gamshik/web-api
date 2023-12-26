@@ -1,6 +1,6 @@
-﻿namespace Entites.DataTransferObject
+﻿namespace Entites.DataTransferObject.AuthorDtos
 {
-    public class AuthorDto
+    public class AuthorForUpdateDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
