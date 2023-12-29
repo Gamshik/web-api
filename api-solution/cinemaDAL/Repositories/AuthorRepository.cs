@@ -39,6 +39,12 @@ namespace cinemaDAL.Repositories
         }
         public async Task UpdateAuthorAsync(Author author, CancellationToken cancellationToken = default)
         {
+            var authorCheck = await _context.Authors.AsNoTracking().SingleOrDefaultAsync(a => a.Id == author.Id, cancellationToken);
+            if (authorCheck == null)
+            {
+                throw new NotFoundException("Not found Author for update");
+            }
+
             _context.Authors.Update(author);
             await _context.SaveChangesAsync(cancellationToken);
         }

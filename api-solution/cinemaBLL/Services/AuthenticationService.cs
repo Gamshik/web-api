@@ -15,15 +15,13 @@ namespace cinemaBLL.Services
     {
         private readonly IMapper _mapper;
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IConfiguration _configuration;
         private readonly IConfigurationSection _jwtSetting;
         private IdentityUser? _identityUser;
         public AuthenticationService(IMapper mapper, UserManager<IdentityUser> userManager, IConfiguration configuration)
         {
             _mapper = mapper;
             _userManager = userManager;
-            _configuration = configuration;
-            _jwtSetting = _configuration.GetSection("JwtSettings");
+            _jwtSetting = configuration.GetSection("JwtSettings");
         }
         public async Task<IdentityResult> RegisterUserAsync(UserForRegistrationDto userForRegistrationDto)
         {

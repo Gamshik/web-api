@@ -9,8 +9,6 @@ using FluentValidation;
 using Interfaces.Repositories;
 using Interfaces.Services;
 using Microsoft.EntityFrameworkCore;
-using AuthenticationService = cinemaBLL.Services.AuthenticationService;
-using IAuthenticationService = Interfaces.Services.IAuthenticationService;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -39,6 +39,12 @@ namespace cinemaDAL.Repositories
         }
         public async Task UpdateMovieAsync(Movie movie, CancellationToken cancellationToken = default)
         {
+            var movieCheck = await _context.Movies.AsNoTracking().SingleOrDefaultAsync(m => m.Id == movie.Id, cancellationToken);
+            if (movieCheck == null)
+            {
+                throw new NotFoundException("Not found Movie for update");
+            }
+
             _context.Movies.Update(movie);
             await _context.SaveChangesAsync();
         }
